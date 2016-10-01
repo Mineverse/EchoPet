@@ -46,12 +46,12 @@
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
-            <version>1.8.4-R0.1-SNAPSHOT</version>
+            <version>1.9-R0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.dsh105</groupId>
             <artifactId>Commodus</artifactId>
-            <version>1.0.3-SNAPSHOT</version>
+            <version>1.0.5</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.captainbern</groupId>
@@ -80,6 +80,13 @@
             <artifactId>VanishNoPacket</artifactId>
             <version>3.18.7</version>
             <scope>provided</scope>
+            <optional>true</optional>
+            <exclusions>
+                <exclusion>
+                    <groupId>net.milkbowl.vault</groupId>
+                    <artifactId>Vault</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>net.milkbowl.vault</groupId>
@@ -123,32 +130,27 @@
         </dependency>
         <dependency>
             <groupId>com.comphenix.protocol</groupId>
-            <artifactId>ProtocolLib-v1_7_R4</artifactId>
-            <version>3.6.4-SNAPSHOT</version>
+            <artifactId>ProtocolLib</artifactId>
+            <version>3.6.5-SNAPSHOT</version>
+            <scope>provided</scope>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>com.comphenix.packetwrapper</groupId>
             <artifactId>PacketWrapper</artifactId>
             <version>1.7.2-R0.5</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
     <repositories>
         <repository>
-            <id>spigot-hub</id>
-            <url>http://hub.spigotmc.org/nexus/content/groups/public/</url>
+            <id>techcable-repo</id>
+            <url>https://repo.techcable.net/content/groups/public/</url>
         </repository>
         <repository>
-            <id>bukkit-repo</id>
-            <url>http://repo.bukkit.org/content/groups/public/</url>
-        </repository>
-        <repository>
-            <id>spigot-repo</id>
+            <id>md_5-repo</id>
             <url>http://repo.md-5.net/content/groups/public/</url>
-        </repository>
-        <repository>
-            <id>dsh-repo</id>
-            <url>http://repo.dsh105.com/</url>
         </repository>
         <repository>
             <id>hawk-repo</id>
@@ -170,13 +172,10 @@
             <id>elmakers-repo</id>
             <url>http://maven.elmakers.com/repository/</url>
         </repository>
+        <!-- Old ProtocolLib Repo -->
         <repository>
-            <id>dmulloy2-repo</id>
-            <url>http://repo.dmulloy2.net/content/repositories/snapshots/</url>
-        </repository>
-        <repository>
-            <id>yawkat-repo</id>
-            <url>http://mvn.yawk.at/</url>
+            <id>comphenix-repo</id>
+            <url>http://repo.comphenix.com/content/groups/public/</url>
         </repository>
     </repositories>
 
