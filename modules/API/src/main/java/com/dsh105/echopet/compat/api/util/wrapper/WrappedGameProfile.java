@@ -63,7 +63,7 @@ public class WrappedGameProfile extends AbstractWrapper {
     }
 
     public static WrappedGameProfile getNewProfile(WrappedGameProfile old, String newName) {
-        return new WrappedGameProfile(old.getId(), newName);
+        return new WrappedGameProfile((Object) old.getId(), newName);
     }
 
     public UUID getUniqueId() {

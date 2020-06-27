@@ -27,16 +27,12 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <modules>
         <module>modules/API</module>
-        <module>modules/v1_6_R3</module>
-        <module>modules/v1_7_R1</module>
-        <module>modules/v1_7_R2</module>
-        <module>modules/v1_7_R3</module>
-        <module>modules/v1_7_R4</module>
-        <module>modules/v1_8_R1</module>
         <module>modules/v1_8_R2</module>
         <module>modules/v1_8_R3</module>
         <module>modules/EchoPet</module>
@@ -51,7 +47,7 @@
         <dependency>
             <groupId>com.dsh105</groupId>
             <artifactId>Commodus</artifactId>
-            <version>1.0.5</version>
+            <version>1.0.3-SNAPSHOT</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.captainbern</groupId>
@@ -131,7 +127,7 @@
         <dependency>
             <groupId>com.comphenix.protocol</groupId>
             <artifactId>ProtocolLib</artifactId>
-            <version>3.6.5-SNAPSHOT</version>
+            <version>3.2.0</version>
             <scope>provided</scope>
             <optional>true</optional>
         </dependency>
@@ -207,8 +203,8 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -221,11 +217,4 @@
             </extension>
         </extensions>
     </build>
-
-    <distributionManagement>
-        <repository>
-            <id>dsh105-ftp</id>
-            <url>ftp://repo.dsh105.com/</url>
-        </repository>
-    </distributionManagement>
 </project>
